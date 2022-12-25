@@ -1,0 +1,105 @@
+.body {
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding-top: 100px;
+}
+
+.card {
+    max-width: 230px;
+    min-width: 315px;
+    margin: 0 5px 35px 5px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+/* Some little fixes in mobile */
+@media(max-width: 649px) {
+
+    .card:first-child,
+    .card:nth-child(2) {
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgb(87, 86, 86);
+    }
+
+}
+
+.card .first-part {
+    margin: 0 12px 20px 0;
+    background-color: rgb(51, 51, 51);
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.card .first-part::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: rgb(51, 51, 51);
+    transform: rotate(45deg);
+    border-radius: 4px;
+    bottom: -5px;
+    z-index: 2;
+}
+
+.card .first-part h3.title,
+.card .first-part h4.subtitle,
+.card .first-part p.description {
+    color: white;
+}
+
+.card .first-part p.description {
+    font-size: 14px;
+    position: relative;
+    z-index: 3;
+}
+
+.card .first-part h3.title {
+    margin-top: 15px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card .first-part h4.subtitle {
+    margin-top: 0;
+    margin-bottom: 3px;
+    padding-top: 0;
+    font-weight: 300;
+    font-size: 14px;
+    color: grey;
+}
+
+.card .second-part {
+    align-items: center;
+}
+
+.card .second-part .card-image {
+    max-width: 80px;
+    border-radius: 8px;
+}
+
+.card .second-part .icons-row {
+    display: inline-flex;
+}
+
+.card .second-part .icons-row a i {
+    margin: 0 5px;
+    color: white;
+    opacity: 0.6;
+    transition: opacity 300ms ease;
+    -webkit-transition: opacity 300ms ease;
+}
+
+.card .second-part .icons-row a i:hover {
+    opacity: 1;
+}

@@ -1,0 +1,140 @@
+div.card-header {
+    background-color: #212529;
+    color: white;
+    border-top-left-radius: 7px !important;
+    border-top-right-radius: 7px !important;
+}
+
+div.card {
+    border-top-left-radius: 7px !important;
+    border-top-right-radius: 7px !important;
+    background-color: #dbdbdb;
+    box-shadow: -5px 8px 15px rgba(0, 0, 0, 0.46);
+
+}
+
+input {
+    position: relative;
+}
+
+div.caged input {
+    position: relative;
+    z-index: 1;
+}
+
+div {
+    position: relative;
+}
+
+div.caged {
+    overflow: hidden;
+}
+
+.caged::before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: #212529;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.caged::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    color: transparent;
+    position: absolute;
+    left: -2px;
+    top: 0;
+    background-image: url('/images/rusty-handle.png');
+    background-size: 35px;
+    background-repeat: no-repeat;
+    z-index: 3;
+    filter: grayscale(100%);
+    /* transition: transform 200ms ease-in; */
+}
+
+.caged.open-input::after,
+.caged.open-input::before {
+    transition: transform 200ms ease-in,
+        border-top-left-radius 300ms ease,
+        border-bottom-left-radius 300ms ease;
+}
+
+div.caged.open-input::after,
+div.caged.open-input::before {
+    animation: open-input 300ms forwards;
+}
+
+div.caged.closed-input::before,
+div.caged.closed-input::after {
+    animation: closed-input 300ms forwards;
+}
+
+div.status-1::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    align-self: center;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.568), 0 0px 5px rgba(255, 0, 0, 0.568);
+}
+
+div.status-2::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    align-self: center;
+    background-color: rgb(255, 230, 0);
+    box-shadow: 0 0 5px rgba(255, 230, 0, 0.568), 0 0px 5px rgba(255, 230, 0, 0.568);
+}
+
+div.status-3::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    align-self: center;
+    background-color: rgb(0, 255, 0);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.568), 0 0px 5px rgba(0, 255, 0, 0.568);
+}
+
+
+@keyframes open-input {
+    0% {
+        transform: translate(0, 0);
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+
+    100% {
+        transform: translate(92%, 0);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@keyframes closed-input {
+    0% {
+        transform: translate(92%, 0);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+}
+
+.form-control.is-valid, .pass, .confirmpass:invalid {
+    background-image: none !important;
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300;1,400;1,900&family=Montserrat:wght@500&family=Roboto&display=swap');
+
+.body {
+    height: 100vh;
+    background-color: #F3F2F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.body .layer1 {
+    height: 50%;
+    width: 57ch;
+    background-color: #F3F2F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.541);
+    position: relative;
+    z-index: default;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+
+.body .layer1 h1 {
+    font-size: 28px;
+    color: black;
+    font-family: 'Merriweather', 'Times new roman';
+    font-weight: 900;
+}
+
+.body .layer1 p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.800);
+    width: 45ch;
+    margin: 5px 0 0 0;
+    padding: 0 12px;
+    font-family: 'Merriweather', 'Times new roman';
+    text-align: justify;
+}
+
+.body .layer1::before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    left: 0;
+    background-color: white;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    transition: transform 500ms ease-in;
+}
+
+.body .layer1::after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    background-color: white;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    transition: transform 500ms ease-in;
+}
+
+.body .layer1:hover::before {
+    transform: translateX(-100%);
+}
+
+.body .layer1:hover::after {
+    transform: translateX(100%);
+}
+
+@media (max-width: 420px) {
+    .body {
+        width: 100%;
+    }
+
+    .body .layer1 {
+        width: 34ch;
+    }
+
+    .body .layer1 p {
+        width: 28ch;
+    }
+}
+
+@media (min-width:420px) and (max-width: 600px) {
+    .body {
+        width: 100%;
+    }
+
+    .body .layer1 {
+        width: 80%;
+    }
+
+    .body .layer1 p {
+        width: 35ch;
+    }
+}

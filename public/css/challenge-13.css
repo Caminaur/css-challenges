@@ -1,0 +1,222 @@
+.body {
+    align-items: center;
+    background-image: url('/images/challenge-13/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.body div.main-box {
+    height: 65vh;
+    width: 60vw;
+    border-radius: 12px;
+    background-color: transparent;
+    display: flex;
+    box-shadow: -2px 2px 8px rgb(0 0 0 / 50%);
+    position: relative;
+}
+
+.body div.signin-box {
+    height: 100%;
+    width: 50%;
+    border-radius: 12px 0 0 12px;
+    background-color: #EAE8EA;
+    z-index: 2;
+}
+
+.body div.signup-box {
+    height: 100%;
+    width: 50%;
+    border-radius: 0 12px 12px 0;
+    background-color: #EAE8EA;
+    z-index: 1;
+}
+
+.body div.signin-box form.formulario,
+.body div.signup-box form.formulario {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.body div.signin-box form.formulario h2.titulo,
+.body div.signup-box form.formulario h2.titulo {
+    font-size: 24px;
+    margin: 25px 0 20px 0;
+    align-self: center;
+    color: #727272;
+    font-weight: 300;
+}
+
+.body div.signin-box form.formulario .inputs,
+.body div.signup-box form.formulario .inputs {
+    border: none;
+    margin: 8px 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+.body div.signin-box form.formulario .inputs input,
+.body div.signup-box form.formulario .inputs input {
+    border: none;
+}
+
+.body div.signin-box form.formulario .inputs input:focus,
+.body div.signup-box form.formulario .inputs input:focus {
+    outline: none;
+}
+
+.body div.signin-box form.formulario small.password-recovery {
+    align-self: center;
+    margin: 20px 0;
+    color: #727272;
+}
+
+.body div.signin-box form.formulario .botones-deco,
+.body div.signup-box form.formulario .botones-deco,
+.botones-deco {
+    padding: 12px 10px;
+    margin: 30px 0 0px 0;
+    width: 60%;
+    align-self: center;
+    border: none;
+    background-color: #006B82;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    overflow: visible;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+div.main-box .signin-action {
+    background-color: transparent;
+    position: absolute;
+    height: inherit;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    opacity: 0;
+    transition: opacity 700ms ease-in;
+}
+
+div.main-box .overlay1 .signup-action {
+    background-image: url('/images/challenge-13/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+
+div.main-box .signup-action.state-2 {
+    animation: state-2 700ms linear;
+    animation-fill-mode: forwards;
+    z-index: 5;
+}
+
+div.main-box .signup-action.state-1 {
+    animation: state-1 700ms linear;
+    animation-fill-mode: forwards;
+    z-index: 5;
+}
+
+#signup-button {
+    transition: opacity 300ms ease-in;
+}
+
+div.main-box .signup-action.state-2 #signup-button {
+    opacity: 0;
+}
+
+div.main-box .signup-action.state-2~.signin-action {
+    opacity: 1;
+}
+
+div.main-box .signup-action.state-2 #signip-button {
+    display: none;
+}
+
+div.main-box .signup-action.state-2~.signup-action {
+    opacity: 1;
+}
+
+/* Sign in box */
+/* div.main-box .signup-action.state-2~.signin-action {
+    opacity: 1;
+}
+
+div.main-box .signup-action.state-2~.signin-action {
+    opacity: 0;
+} */
+
+/* Sign in box */
+
+div.main-box div.overlay1 {
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 100;
+}
+
+@keyframes state-2 {
+    0% {
+        right: 0;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    100% {
+        right: 50%;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+    }
+}
+
+@keyframes state-1 {
+    0% {
+        right: 50%;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+    }
+
+    100% {
+        right: 0;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+
+    }
+
+}

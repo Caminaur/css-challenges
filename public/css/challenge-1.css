@@ -1,0 +1,89 @@
+body {
+    background-color: #212121;
+}
+
+.body {
+    margin: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.body .card {
+    flex-basis: 31%;
+    align-items: center;
+    min-width: 300px;
+    max-width: 310px;
+    /* background-color: rgb(194, 194, 49); */
+    background-color: rgb(218, 218, 218);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.body .card .card-image {
+    margin-top: 20px;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+}
+
+.body .card .card-image:hover {
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+/* .body .card .card-image:hover ~ .title{
+    rotate: 360deg;
+    transition: 0.5s;
+}
+.body .card .card-image:hover ~ .subtitle{
+    rotate: -360deg;
+    transition: 0.5s;
+} */
+
+.body .card .title {
+    text-transform: capitalize;
+    color: rgb(22, 12, 12);
+    margin: 0;
+}
+
+.body .card .subtitle {
+    margin: 0 10;
+    text-transform: capitalize;
+    color: rgba(91, 96, 99, 0.575);
+}
+
+.body .card p.description {
+    text-align: center;
+}
+
+.body .card .icons-row {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.body .card .icons-row .icon i {
+    color: rgb(104, 104, 104);
+    font-size: 25px;
+}
+
+.body .card .icons-row .icon i:hover {
+    color: black;
+    transition: .8s;
+}
+
+.body .card .title {
+    margin-top: 15px;
+    font-size: 20px;
+    pointer-events: none
+}
+
+.body .card .subtitle {
+    color: #888;
+    font-size: 16px;
+    letter-spacing: 4px;
+    pointer-events: none
+}

@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=BenchNine:700");
+
+.body {
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.body button.button {
+    font-size: 18px;
+    font-family: "BenchNine", 'Courier New', Courier, monospace;
+    border: none;
+    text-transform: uppercase;
+    background-color: #db7e37;
+    color: white;
+    padding: 4px 30px;
+    position: relative;
+}
+
+.body button.button::before,
+.body button.button::after {
+    content: '';
+    height: 2px;
+    /* width: 20px; */
+    width: 20%;
+    background-color: #db7e37;
+    position: absolute;
+    transition: width 300ms ease;
+}
+
+.body button.button::before {
+    top: -5px;
+    left: 0px;
+}
+
+.body button.button:hover::before,
+.body button.button:hover::after {
+    width: 100%;
+}
+
+.body button.button::after {
+    bottom: -5px;
+    right: 0px;
+}

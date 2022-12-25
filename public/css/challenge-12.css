@@ -1,0 +1,87 @@
+div.body {
+    background-color: #9B5EE3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* font-size: 30px; */
+}
+
+div.body div.search {
+    padding: 10px 60px 10px 15px;
+    background-color: #8946db;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+div.body div.search input#input {
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    color: white;
+    margin: 0 5px 0 5px;
+    font-size: 30px;
+}
+
+.body .search input#input:focus {
+    outline: none;
+}
+
+div.body div.search input#input::placeholder {
+    color: white;
+}
+
+.body .search #search-lupa {
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 5px;
+    top: 18%;
+    color: white;
+    font-weight: 700;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.body .search div#search-spinner {
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 18%;
+    color: white;
+    font-weight: 700;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+
+    animation: spinner 1s infinite linear;
+    display: none;
+}
+
+div.search.loading button {
+    display: none;
+}
+
+.body div.search.loading #search-spinner {
+    display: block;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.body p.message {
+    color: #8135dd;
+    margin: 12px 0 0 5px;
+    font-size: 14px;
+}

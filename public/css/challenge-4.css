@@ -1,0 +1,116 @@
+main {
+    background-color: #212121;
+}
+
+.body {
+    background-color: #212121;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+    flex-basis: 25%;
+    max-width: 315px;
+    min-width: 230px;
+    /* display: inline-block; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card .image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.card {
+    position: relative;
+}
+
+.card .link a {
+    position: absolute;
+    text-decoration: none;
+    background-color: #212121;
+    color: white;
+    font-size: 1px;
+    padding: 6px 8px;
+    border: 3px solid white;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: font-size 300ms ease-out;
+}
+
+.card:hover .link a {
+    opacity: 1;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.card .image:hover .link {
+    opacity: 1;
+    font-size: 16px;
+}
+
+.card .image div.link {
+    position: absolute;
+    z-index: 3;
+
+}
+
+.card .image::after,
+.card .image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* width: 500px; */
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 2;
+    transition: transform 300ms ease;
+}
+
+.card .image::before {
+    -webkit-transform: skew(55deg) translateX(-255%);
+    transform: skew(55deg) translateX(-255%);
+    width: 300px;
+    top: 50;
+}
+
+
+.card .image::after {
+    -webkit-transform: skew(55deg) translateX(255%);
+    transform: skew(55deg) translateX(255%);
+    width: 300px;
+    top: -50;
+}
+
+
+.card:hover .image::before {
+    -webkit-transform: skew(55deg) translateX(-62%);
+    transform: skew(55deg) translateX(-62%);
+    width: 300px;
+    top: 0;
+}
+
+
+.card:hover .image::after {
+    -webkit-transform: skew(55deg) translateX(45%);
+    transform: skew(55deg) translateX(45%);
+    width: 300px;
+    top: -0;
+}

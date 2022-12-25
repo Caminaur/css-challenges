@@ -1,0 +1,182 @@
+.body {
+    background-color: #EBECF2;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+form.signin {
+    width: 29%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+form.signin h1 {
+    font-size: 30px;
+    margin: 30px;
+    text-align: center;
+    color: #949497;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+form.signin input.inputs {
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: transparent;
+    border: solid 1px transparent;
+    border-radius: 40px;
+    margin: 10px 0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.368) inset,
+        -3px -3px 3px rgba(255, 255, 255, 0.568) inset;
+    outline: none;
+}
+
+
+/*Login div*/
+form.signin button.btnlogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(168, 0, 0);
+    margin: 10px 0 10px 0;
+    padding: 10px 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.368),
+        -5px -5px 2.5px rgba(255, 255, 255, 0.668);
+
+    transition: box-shadow 400ms ease;
+}
+
+form.signin button.btnlogin:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.368),
+        -2px -2px 2.5px rgba(253, 253, 253, 0.668);
+}
+
+/*Login icon*/
+form.signin button.btnlogin .icon {
+    margin: 0 10px;
+}
+
+form.signin div.buttons-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px 0;
+}
+
+form.signin div.buttons-row button.unit {
+    height: 48px;
+    width: 48px;
+    padding: 5px;
+    margin: 5px 12px;
+    font-size: 26px;
+    color: #696969;
+    border: none;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.368),
+        -3px -3px 2.5px rgba(255, 255, 255, 0.468);
+    transition: box-shadow 400ms ease;
+}
+
+form.signin div.buttons-row button.unit:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.368),
+        -2px -2px 2.5px rgba(253, 253, 253, 0.468);
+}
+
+form.signin input.inputs.selected,
+form.signin input.inputs.unselected,
+form.signin .email-row input.selected,
+form.signin .email-row input.unselected {
+    animation: animation-selected 500ms forwards;
+}
+
+
+form.signin .email-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+form.signin .email-row input {
+    padding: 10px 15px;
+    width: 80%;
+    font-size: 20px;
+    background-color: transparent;
+    border: solid 1px transparent;
+    border-radius: 40px;
+    margin: 10px 0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.368) inset,
+        -3px -3px 3px rgba(255, 255, 255, 0.568) inset;
+    outline: none;
+}
+
+form.signin .email-row button.unit {
+    height: 48px;
+    width: 48px;
+    padding: 5px;
+    font-size: 26px;
+    color: #696969;
+    border: none;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.368),
+        -3px -3px 2.5px rgba(255, 255, 255, 0.468);
+    transition: box-shadow 300ms ease;
+}
+
+form.signin .email-row button.unit:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.368),
+        -2px -2px 2.5px rgba(253, 253, 253, 0.468);
+}
+
+@keyframes animation-selected {
+    0% {
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.500) inset,
+            -3px -3px 3px rgba(255, 255, 255, 0.700) inset;
+    }
+
+    100% {
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500) inset,
+            -1px -1px 2px rgba(255, 255, 255, 0.700) inset;
+    }
+}
+
+@keyframes animation-unselected {
+    0% {
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500) inset,
+            -1px -1px 2px rgba(255, 255, 255, 0.700) inset;
+    }
+
+    100% {
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.500) inset,
+            -3px -3px 3px rgba(255, 255, 255, 0.700) inset;
+    }
+}
+
+
+form.signin .email-row button.unit.clicked,
+form.signin button.btnlogin.clicked,
+form.signin div.buttons-row button.unit.clicked {
+    animation: clicked 500ms forwards;
+}
+
+@keyframes clicked {
+    0% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: purple;
+    }
+}

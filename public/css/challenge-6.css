@@ -1,0 +1,90 @@
+.navbar {
+    position: fixed;
+}
+
+.body {
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.contenido img {
+    opacity: 1;
+    transition: opacity 300ms ease;
+    position: relative;
+}
+
+.contenido:hover img {
+    opacity: 0.3;
+}
+
+.contenido {
+    overflow: clip;
+    align-items: center;
+    position: relative;
+    max-width: 90vw;
+}
+
+.contenido p.titulo,
+.contenido p.subtitulo {
+    color: white;
+    position: absolute;
+}
+
+.contenido p.titulo {
+    font-size: 23px;
+    top: 42%;
+    right: 39%;
+    text-transform: uppercase;
+    color: #909eb9;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.contenido p.subtitulo {
+    font-size: 25px;
+    top: 51%;
+    right: 36.5%;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.contenido::before,
+.contenido::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 60px;
+    background-color: #282e3a;
+    display: block;
+    z-index: 2;
+    opacity: .85;
+    transition: top 300ms ease, bottom 300ms ease;
+}
+
+.contenido::before {
+    top: -80px;
+}
+
+.contenido::after {
+    bottom: -80px;
+}
+
+.contenido:hover::after {
+    bottom: 0;
+}
+
+.contenido:hover::before {
+    top: 0;
+}
+
+.contenido:hover p.titulo,
+.contenido:hover p.subtitulo {
+    opacity: 1;
+}
