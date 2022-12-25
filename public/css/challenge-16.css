@@ -94,10 +94,13 @@ form.signin div.buttons-row button.unit:hover {
 }
 
 form.signin input.inputs.selected,
-form.signin input.inputs.unselected,
-form.signin .email-row input.selected,
-form.signin .email-row input.unselected {
+form.signin .email-row input.selected {
     animation: animation-selected 500ms forwards;
+}
+
+form.signin input.inputs.unselected,
+form.signin .email-row input.unselected {
+    animation: animation-unselected 500ms forwards;
 }
 
 

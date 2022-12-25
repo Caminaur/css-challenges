@@ -9,7 +9,7 @@
 
 @section('main')
     <div class="body">
-        <form action="" class="signin"x>
+        <form action="" class="signin" autocomplete="off">
             <h1>Sign in</h1>
             <input class="inputs" type="email" name="email" id="email" placeholder="Email Address">
             <input class="inputs" type="password" name="password" id="pass" placeholder="Password">
