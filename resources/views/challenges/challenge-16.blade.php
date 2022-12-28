@@ -18,19 +18,19 @@
                 Log in
             </button>
             <div class="buttons-row">
-                <button class="unit">
+                <button type="button" class="unit">
                     <ion-icon class="icon" name="arrow-back"></ion-icon>
                 </button>
-                <button class="unit">
+                <button type="button" class="unit">
                     <ion-icon class="icon" name="bookmark"></ion-icon>
                 </button>
-                <button class="unit">
+                <button type="button" class="unit">
                     <ion-icon class="icon" name="settings"></ion-icon>
                 </button>
             </div>
             <div class="email-row">
                 <input type="email" name="email-2" id="email-2" placeholder="Email Address">
-                <button class="unit">
+                <button type="button" class="unit">
                     <ion-icon name="search"></ion-icon>
                 </button>
             </div>
