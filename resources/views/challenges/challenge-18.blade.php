@@ -5,6 +5,8 @@
 
 @section('main')
     <div class="body">
-        <button class="button">submit</button>
+        <div class="button" id="button"></div>
+        <div class="contenido" id="circle"></div>
     </div>
+    <script src="{{ url('/js/challenge-18/index.js') }}"></script>
 @endsection

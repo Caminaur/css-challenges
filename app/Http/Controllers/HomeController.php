@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Services\GenericService;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        (new GenericService)->generateCSVReport(2);
+        Excel::download(new UserExport, 'invoices.xlsx');
         return view('home.home');
     }
 }
