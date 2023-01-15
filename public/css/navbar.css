@@ -1,6 +1,6 @@
 .dropdown-menu.show {
     position: relative;
-    max-height: 35ch;
+    max-height: 45ch;
     min-width: 60ch !important;
     overflow-y: scroll;
     display: flex;

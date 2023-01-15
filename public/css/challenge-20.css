@@ -1,0 +1,58 @@
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E7EA;
+}
+
+.cajita {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.body div.boton {
+    padding: 9px 15px 9px 10px;
+    border-radius: 30px;
+    margin-right: auto;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.boton:hover {
+    background-color: #c3c4de;
+}
+
+div.body div.boton h3 {
+    margin-left: 8px;
+    font-size: 24px;
+    align-self: center;
+    font-weight: 400;
+    color: rgb(21, 21, 94);
+    margin-bottom: 0;
+}
+
+div.body div.cajita div.boton input[type="checkbox"] {
+    border-radius: 50%;
+    background-color: rgb(239, 239, 239);
+    height: 35px;
+    width: 35px;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 3px solid rgb(21, 21, 94);
+    transition: border 200ms linear;
+}
+
+div.body div.cajita div.boton input[type="checkbox"]:checked {
+    border: 10px solid rgb(21, 21, 94);
+}

@@ -43,6 +43,9 @@
                                 </li>
                             @endif
                         @endfor
+                        <li class="dropdown-item">
+                            <a href={{ url('/css-challenge-bonus/1') }} class="dropdown-item">Bonus 1</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -124,12 +127,6 @@
                 </li>
             </ul>
         </div>
-        {{-- <form action="" class="d-flex">
-            <input placeholder="Buscar..." type="text" class="form-control me-2">
-            <button class="btn btn-primary" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form> --}}
         @guest
             @if (Route::has('login'))
                 <li id="login-button" class="auth-button nav-item">

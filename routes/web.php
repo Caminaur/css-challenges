@@ -49,6 +49,11 @@ Route::get('/css-challenge-{id}', function ($id) {
     $view = 'challenges.challenge-' . $id;
     return view($view);
 });
+
+Route::get('/css-challenge-bonus/{id}', function ($id) {
+    $view = 'bonus-challenges.bonus-challenge-' . $id;
+    return view($view);
+});
 ///////////////////////////// CHALLENGES /////////////////////////////
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

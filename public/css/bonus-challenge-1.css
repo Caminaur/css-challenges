@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body ul {
+    display: flex;
+    justify-content: center;
+}
+
+.body ul li {
+    text-decoration: none;
+    list-style: none;
+    height: 65px;
+    width: 65px;
+    margin-right: 18px;
+    display: inline-block;
+    transform: rotate(-35deg) skew(30deg);
+}
+
+.body ul a span {
+    position: absolute;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.body ul a {
+    text-decoration: none;
+}
+
+.body ul li:hover>a span:last-child {
+    transform: rotate(0) skew(0) translate(50px, -50px);
+}
+
+.body ul li:hover>a span:nth-child(1),
+.body ul li:hover>a span:nth-child(2),
+.body ul li:hover>a span:nth-child(3),
+.body ul li:hover>a span:nth-child(4) {
+    opacity: .2;
+}
+
+.body ul li:hover>a span:nth-child(1) {
+    transform: rotate(0) skew(0) translate(10px, -10px);
+    opacity: .2;
+}
+
+.body ul li:hover>a span:nth-child(2) {
+    transform: rotate(0) skew(0) translate(20px, -20px);
+    opacity: .4;
+}
+
+.body ul li:hover>a span:nth-child(3) {
+    transform: rotate(0) skew(0) translate(30px, -30px);
+    opacity: .6;
+}
+
+.body ul li:hover>a span:nth-child(4) {
+    transform: rotate(0) skew(0) translate(40px, -40px);
+    opacity: .8;
+}
+
+
+.body ul li a span {
+    text-align: center;
+    align-self: center;
+    border-radius: 15px;
+    transition: 500ms ease;
+}
+
+@media(max-width:430px) {
+    .body ul li a span {
+        height: 45px;
+        width: 45px;
+    }
+
+    .body ul li a span::before {
+        font-size: 25px;
+        position: relative;
+        top: -2px !important;
+    }
+
+}
+
+.body ul li:nth-child(1) span {
+    background-color: #015A8A;
+}
+
+.body ul li:nth-child(2) span {
+    background-color: #67B4F0;
+}
+
+.body ul li:nth-child(3) span {
+    background-color: #E04531;
+}
+
+.body ul li:nth-child(4) span {
+    background-color: #0D1117;
+}
+
+.body ul li:nth-child(5) span {
+    background: linear-gradient(90deg, #833ab4, #fd1d1d 50%, #fcb045);
+}
+
+.body ul li a span::before {
+    position: relative;
+    top: 0;
+    color: white;
+    align-items: center;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.body ul li:nth-child(2) a span::before,
+.body ul li:nth-child(3) a span::before {
+    left: 1px;
+}

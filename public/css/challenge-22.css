@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.body {
+    height: 100vh;
+    background-color: #2689F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-div h2 {
+    font-family: Montserrat, 'Courier New', Courier, monospace;
+    color: rgba(255, 255, 255, 0.771);
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.main-div small {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.496);
+}
+
+.drop1 {
+    height: 130px;
+    width: 130px;
+    background-color: #2A88F7;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    border-radius: 52% 50% 54% 42%;
+    transform: rotate(17deg);
+    opacity: .6;
+    box-shadow:
+        0px 5px 3px #1574EE inset,
+        18px -20px 21px rgba(255, 255, 255, 0.597) inset,
+        10px -10px 12px rgba(255, 255, 255, 0.797) inset,
+        8px -5px 12px rgba(255, 255, 255, 0.997) inset,
+        -12px 28px 16px rgba(0, 0, 0, 0.400),
+        -3px 3px 8px rgba(0, 0, 0, 0.300) inset;
+}
+
+.drop1::before {
+    content: '';
+    width: 25px;
+    height: 23px;
+    transform: rotate(25deg);
+    background-color: white;
+    position: absolute;
+    top: 17px;
+    opacity: .9;
+    right: 30px;
+    border-radius: 56% 65% 42% 57%;
+}
+
+.drop1::after {
+    content: '';
+    width: 12px;
+    height: 11px;
+    transform: rotate(103deg);
+    background-color: white;
+    position: absolute;
+    top: 39px;
+    opacity: .9;
+    right: 19px;
+    border-radius: 56% 65% 42% 57%;
+}
+
+.drop2 {
+    height: 101px;
+    width: 105px;
+    background-color: #2A88F7;
+    position: absolute;
+    right: -38px;
+    top: 10px;
+    border-radius: 48% 57% 51% 45%;
+    transform: rotate(-10deg);
+    opacity: .6;
+    box-shadow: 0px 5px 3px #1574ee inset, 18px -20px 21px rgb(255 255 255 / 60%) inset, 10px -10px 12px rgb(255 255 255 / 80%) inset, 8px -5px 12px rgb(255 255 255 / 100%) inset, -12px 28px 16px rgb(0 0 0 / 40%), -3px 3px 8px rgb(0 0 0 / 30%) inset;
+}
+
+.drop2::before {
+    content: '';
+    width: 20px;
+    height: 18px;
+    transform: rotate(25deg);
+    background-color: white;
+    position: absolute;
+    top: 15px;
+    opacity: .9;
+    right: 23px;
+    border-radius: 56% 65% 42% 57%;
+}
+
+.drop2::after {
+    content: '';
+    width: 12px;
+    height: 11px;
+    transform: rotate(103deg);
+    background-color: white;
+    position: absolute;
+    top: 33px;
+    opacity: 1;
+    right: 15px;
+    border-radius: 56% 65% 42% 57%;
+}
