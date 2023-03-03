@@ -1,11 +1,14 @@
+#main {
+    height: 100vh;
+}
+
 div.body {
     background-color: #9B5EE3;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* font-size: 30px; */
 }
 
 div.body div.search {

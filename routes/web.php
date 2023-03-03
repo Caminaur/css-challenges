@@ -1,21 +1,18 @@
 <?php
 
+use App\Http\Controllers\CoockieController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Services\CoockieService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use Illuminate\Support\Facades\Log;
 
 Route::get('/', function () {
+    $lastpage = (new CoockieService())->verifyAndRedirect();
+    if ($lastpage != false) {
+        return redirect($lastpage);
+    }
     return redirect('/home');
 });
 
@@ -45,7 +42,7 @@ Route::get('/css-challenge-1b', function () {
 Route::get('/css-challenge-4b', function () {
     return view('challenges.challenge-4b');
 });
-Route::get('/css-challenge-{id}', function ($id) {
+Route::get('/css-challenge-{id}', function (Request $request, $id) {
     $view = 'challenges.challenge-' . $id;
     return view($view);
 });

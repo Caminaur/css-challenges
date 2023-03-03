@@ -2,9 +2,13 @@ main {
     background-color: #212121;
 }
 
+#main {
+    height: 100vh;
+}
+
 .body {
     background-color: #212121;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     padding: 0 100px;
     display: flex;

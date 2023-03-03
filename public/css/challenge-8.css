@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=BenchNine:700");
 
-.body {
+#main {
     height: 100vh;
+}
+
+.body {
+    height: 100%;
     background-color: #272727;
     display: flex;
     justify-content: center;

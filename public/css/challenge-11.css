@@ -1,7 +1,10 @@
+#main {
+    height: 100vh;
+}
+
 .body {
     background-color: #278EDA;
-    height: 100vh;
-    padding-top: 100px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

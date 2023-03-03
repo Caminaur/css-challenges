@@ -1,5 +1,9 @@
-.body {
+#main {
     height: 100vh;
+}
+
+.body {
+    height: 100%;
     background-color: #CCCCCC;
     display: flex;
     justify-content: center;

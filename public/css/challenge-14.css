@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300;1,400;1,900&family=Montserrat:wght@500&family=Roboto&display=swap');
 
-.body {
+#main {
     height: 100vh;
+}
+
+.body {
+    height: 100%;
     background-color: #F3F2F3;
     display: flex;
     justify-content: center;

@@ -14,7 +14,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span class="fa fa-linkedin"></span>
+                        <span class="fa-brands fa-linkedin"></span>
                     </a>
                 </li>
                 <li>
@@ -23,7 +23,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span class="fa fa-twitter"></span>
+                        <span class="fa-brands fa-twitter"></span>
                     </a>
                 </li>
                 <li>
@@ -32,7 +32,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span class="fa fa-youtube"></span>
+                        <span class="fa-brands fa-youtube"></span>
                     </a>
                 </li>
                 <li>
@@ -41,7 +41,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span class="fa fa-github"></span>
+                        <span class="fa-brands fa-github"></span>
                     </a>
                 </li>
                 <li>
@@ -50,7 +50,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span class="fa fa-instagram"></span>
+                        <span class="fa-brands fa-instagram"></span>
                     </a>
                 </li>
             </ul>

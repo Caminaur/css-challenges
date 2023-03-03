@@ -1,12 +1,15 @@
-.body {
+#main {
     height: 100vh;
+}
+
+.body {
+    height: 100%;
     background-color: #272727;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     overflow: auto;
-    padding-top: 100px;
 }
 
 .card {

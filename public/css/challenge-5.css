@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
+#main {
+    height: 100vh;
+}
+
 .body {
     background-color: #252525;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,0 +1,111 @@
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.central-button {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 6px 6px 16px rgb(102, 102, 102, .4);
+    overflow: hidden;
+}
+
+.central-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.central-button button {
+    border: none;
+    background: none;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+
+.central-button button#on {
+    position: absolute;
+    transform: translateX(-100px);
+    background: #3BC051;
+    color: whitesmoke;
+    overflow: hidden;
+    transition: transform 1000ms ease;
+}
+
+
+.central-button button#off {
+    background: linear-gradient(-45deg, rgb(220, 220, 220), rgb(190, 190, 190));
+    color: rgb(140, 140, 140);
+    transition: transform 800ms;
+}
+
+
+.central-button button#on::before,
+.central-button button#on::after {
+    content: '';
+    height: 50px;
+    width: 100px;
+    background-color: #dfdfdf;
+    position: absolute;
+    left: 0;
+    transition: transform 500ms;
+}
+
+.central-button button#on::before {
+    top: 0px;
+}
+
+.central-button button#on::after {
+    bottom: 0px;
+}
+
+/* boton OFF apertura*/
+
+input#checkbox:checked~button#off {
+    transform: translateX(-100px);
+}
+
+input#checkbox:not(:checked)~button#off {
+    transform: translateX(0px);
+    transition-delay: 1500ms;
+}
+
+/* boton OFF apertura*/
+
+/* boton ON entrada */
+input#checkbox:checked~button#on {
+    transform: translateX(0px);
+    transition-delay: 700ms;
+}
+
+/* boton ON entrada */
+
+/* boton ON apertura */
+input#checkbox:checked~button#on::before {
+    transform: translateY(-50px);
+    transition-delay: 1550ms;
+}
+
+input#checkbox:checked~button#on::after {
+    transform: translateY(50px);
+    transition-delay: 1550ms;
+}
+
+/* boton ON apertura */
+
+/* boton ON salida */
+input#checkbox:not(:checked)~button#on {
+    transform: translateX(-100px);
+    transition-delay: 700ms;
+}
+
+/* boton ON salida */

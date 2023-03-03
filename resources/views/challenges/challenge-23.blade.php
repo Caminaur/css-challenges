@@ -5,6 +5,17 @@
 
 @section('main')
     <div class="body">
-        <button class="button">submit</button>
+        <div class="card">
+            <img src="{{ url('/images/challenge-23/game1.jpg') }}" alt="">
+        </div>
+        <div class="card">
+            <img src="{{ url('/images/challenge-23/game2.jpg') }}" alt="">
+        </div>
+        <div class="card">
+            <img src="{{ url('/images/challenge-23/game3.jpg') }}" alt="">
+        </div>
+        <div class="card">
+            <img src="{{ url('/images/challenge-23/game4.jpg') }}" alt="">
+        </div>
     </div>
 @endsection

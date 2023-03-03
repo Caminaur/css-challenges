@@ -1,9 +1,10 @@
-body {
+#main {
+    height: 100vh;
     background-color: #212121;
 }
 
 .body {
-    margin: 5%;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

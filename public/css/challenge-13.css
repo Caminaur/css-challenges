@@ -1,3 +1,7 @@
+#main {
+    height: 100vh;
+}
+
 .body {
     align-items: center;
     background-image: url('/images/challenge-13/background.jpg');
@@ -5,10 +9,9 @@
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
 }
 
 .body div.main-box {

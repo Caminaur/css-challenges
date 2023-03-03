@@ -1,0 +1,116 @@
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+
+.accordion {
+    margin: 20px 0;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    width: 60ch;
+}
+
+.accordion-item {
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.accordion-item button {
+    border: none;
+    margin: 10px 0;
+    margin-left: 0;
+    padding-left: 0;
+    color: rgb(104, 104, 104);
+    font-size: 16px;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: 2px rgb(31, 128, 255) solid;
+
+}
+
+.accordion-content {
+    padding-top: 5px;
+    /* border-top: 2px rgb(31, 128, 255) solid; */
+    color: rgb(75, 75, 75);
+    width: 100%;
+    font-size: 14px;
+}
+
+.accordion-item button .icon {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    height: 23px;
+    width: 23px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(66, 66, 66);
+}
+
+.accordion-item button .icon::before,
+.accordion-item button .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    color: rgb(104, 104, 104);
+    background: currentColor;
+}
+
+.accordion-item button .icon::before {
+    top: 2px;
+    left: 9px;
+    height: 16px;
+    width: 2px;
+}
+
+.accordion-item button .icon::after {
+    top: 8.8px;
+    left: 1.8px;
+    height: 2px;
+    width: 16px;
+}
+
+.accordion-item button:hover .icon {
+    border: 2px solid rgb(31, 128, 255);
+}
+
+.accordion-item button:hover,
+.accordion-item button:hover .icon::before,
+.accordion-item button:hover .icon::after {
+    color: rgb(31, 128, 255);
+}
+
+.accordion-content {
+    opacity: 0.3;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, opacity 0.3s;
+}
+
+.accordion-item button.active~div.accordion-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.accordion-item button.active span::before {
+    transition: opacity 0.3s;
+}
+
+.accordion-item button.active span::before {
+    opacity: 0;
+}
