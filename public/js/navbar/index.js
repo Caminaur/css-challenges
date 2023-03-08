@@ -8,10 +8,19 @@ document.addEventListener('click', (e)=>{
         currentDropdown = e.target.closest("[data-dropdown]");
         currentDropdown.classList.toggle('active');
     }
-
-    console.log(e.target.closest("[data-dropdown]"));
     document.querySelectorAll("[data-dropdown].active").forEach(dropdown=>{
         if (dropdown === currentDropdown) return;
         dropdown.classList.remove("active");
     });
+});
+
+const toggleButton = document.getElementById('toggleButton');
+
+toggleButton.addEventListener('click',()=>{
+    if (toggleButton.matches("[data-toggle-button=false]")) {
+        toggleButton.setAttribute('data-toggle-button',true);
+    } else{
+        toggleButton.setAttribute('data-toggle-button',false);
+    }
+    console.log(toggleButton);
 });

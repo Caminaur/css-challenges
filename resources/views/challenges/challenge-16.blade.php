@@ -29,7 +29,7 @@
                 </button>
             </div>
             <div class="email-row">
-                <input type="email" name="email-2" id="email-2" placeholder="Email Address">
+                <input class="inputs" type="email" name="email-2" id="email-2" placeholder="Email Address">
                 <button type="button" class="unit">
                     <ion-icon name="search"></ion-icon>
                 </button>

@@ -9,8 +9,8 @@ class CoockieService
     public function setUrlCoockie()
     {
         $url = request()->url();
-        $endpoint = explode('http://localhost:8000', $url)['1'];
-        setcookie('lastpage', $endpoint, time() + 360000);
+        $endpoint = explode(':8000', $url)['1'];
+        setcookie('lastpage', $endpoint, time() + 360000, httponly: true);
     }
     public function verifyAndRedirect()
     {

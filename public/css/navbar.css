@@ -1,3 +1,7 @@
+:root {
+    --main-color: #212529;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -17,7 +21,7 @@ body {
 }
 
 header {
-    background-color: #212529;
+    background-color: var(--main-color);
 }
 
 .navbar {
@@ -25,6 +29,7 @@ header {
     padding: 0;
     box-sizing: border-box;
     height: auto;
+    height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -35,24 +40,24 @@ header {
     justify-content: flex-start;
     margin-bottom: 0;
     color: rgb(163, 163, 163);
+    position: relative;
 }
 
 .navbar ul:last-child {
-    margin-right: 35px;
-    padding-right: 30px;
+    padding-right: 32px;
 }
 
 .navbar ul:first-child {
     margin-left: 35px;
 }
 
-.navbar ul li {
+.navbar ul li, .navbar li {
     list-style: none;
     padding: 1.2rem 0.8rem;
     height: auto;
 }
 
-.navbar ul li a {
+.navbar ul li a, .navbar li {
     text-decoration: none;
     color: rgb(163, 163, 163);
 }
@@ -62,17 +67,17 @@ header {
     color: azure;
 }
 
-.navbar ul li a i {
+.navbar ul li a i, .navbar li i {
     font-size: 17px;
     margin: 0 4px;
 }
 
-.navbar ul li.navbar-toggle {
+.navbar li.navbar-toggle {
     display: none;
 }
 
 @media(max-width:600px) {
-    .navbar ul {
+    .navbar ul, .navbar li {
         flex-wrap: wrap;
         width: 100%;
         margin-left: 0 !important;
@@ -81,13 +86,19 @@ header {
         padding-left: 0 !important;
     }
 
-    .navbar ul li.navbar-toggle {
+    .navbar li.navbar-toggle {
+        color: rgb(163, 163, 163);
         display: block;
     }
 
-    .navbar ul li {
+    .navbar ul li,
+    .navbar li {
         width: 100%;
         text-align: center;
+    }
+
+    .navbar ul div.dropdown {
+        width: 100%;
     }
 
 }
@@ -140,6 +151,63 @@ header {
 
 .dropdown-links a {
     padding: .4rem;
+}
+
+@media(max-width:600px) {
+    nav.navbar .navbar-toggle[data-toggle-button=false]~ul {
+        display: block;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+    }
+
+    nav.navbar .navbar-toggle[data-toggle-button=false]~ul {
+        opacity: 0;
+        display: none;
+        transform: translateY(-480px);
+        transition: transform 300ms ease, opacity 300ms ease, display 800ms ease;
+    }
+
+    nav.navbar .navbar-toggle[data-toggle-button=true]~.nav-item {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: transform 300ms ease, opacity 300ms ease, display 800ms ease;
+    }
+}
+
+.ba-box {
+    position: absolute;
+    bottom: -80px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1000;
+}
+
+.before-next {
+    display: block;
+    padding: 20px;
+    background-color: #212529;
+    filter: hue-rotate(15deg);
+    opacity: 0.2;
+    transition: opacity 200ms ease, transform 200ms ease;
+    outline: solid 3px rgb(163, 163, 163);
+}
+
+.before-next.before {
+    border-radius: 20px 0 0 20px;
+}
+
+.before-next.after {
+    border-radius: 0 20px 20px 0;
+}
+
+.before-next:hover {
+    opacity: 1;
+    transform: scale(1.06);
 }
 
 /* https://www.youtube.com/watch?v=S-VeYcOCFZw */

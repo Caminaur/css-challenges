@@ -1,7 +1,3 @@
-.navbar {
-    position: fixed;
-}
-
 .body {
     background-color: #252525;
     display: flex;
@@ -10,6 +6,13 @@
     min-height: 100vh;
 }
 
+header {
+    z-index: 1;
+}
+
+.contenido {
+    z-index: 0;
+}
 
 .contenido img {
     opacity: 1;

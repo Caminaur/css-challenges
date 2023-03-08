@@ -25,7 +25,7 @@
     <header>
         {{-- Navbar --}}
         {{-- @include('partials.navbar') --}}
-        @include('partials.newnavbar')
+        @include('partials.navbar')
     </header>
 
     <main id="main">
