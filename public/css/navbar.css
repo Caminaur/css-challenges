@@ -1,5 +1,8 @@
 :root {
     --main-color: #212529;
+    --main-hover-color: #32373b;
+    --btn-color: #fff;
+    --btn-background-color: #0B5ED7;
 }
 
 body, html {
@@ -38,6 +41,7 @@ header {
 .navbar ul {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     margin-bottom: 0;
     color: rgb(163, 163, 163);
     position: relative;
@@ -115,9 +119,9 @@ header {
 }
 
 .dropdown-menu {
+    z-index: 1001;
     position: absolute;
     display: block;
-    left: 0;
     top: calc(100% + .20rem);
     background-color: #212529;
     color: azure;
@@ -130,7 +134,21 @@ header {
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.dropdown.active li>a.link+.dropdown-menu {
+.dropdown:nth-child(1) .dropdown-menu {
+    left: 0;
+}
+
+.dropdown-menu.logout {
+    right: -15px;
+}
+
+.nav-item {
+    cursor: pointer;
+    background-color: var(--main-color);
+}
+
+.dropdown.active li>a.link+.dropdown-menu,
+.nav-item.active .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -197,6 +215,10 @@ header {
     outline: solid 3px rgb(163, 163, 163);
 }
 
+.lang-div.dropdown-menu {
+    right: 0;
+}
+
 .before-next.before {
     border-radius: 20px 0 0 20px;
 }
@@ -208,6 +230,52 @@ header {
 .before-next:hover {
     opacity: 1;
     transform: scale(1.06);
+}
+
+.lang-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.lang-form select {
+    margin: 10px default;
+    padding: 8px 0;
+    width: 300px;
+}
+
+
+
+.flag-icon {
+    height: 20px;
+    width: 20px;
+    margin: 5px 5px;
+}
+
+.lang-links {
+    display: flex;
+    align-items: center;
+}
+
+.lang-links:hover {
+    background-color: var(--main-hover-color);
+}
+
+.btn-submit {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: var(--btn-color);
+    background-color: var(--main-color);
+    box-shadow: none;
+    margin-top: 10px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    transition: color 300ms ease;
+}
+
+.btn-submit:hover {
+    color: var(--btn-color);
+    background-color: var(--main-hover-color);
 }
 
 /* https://www.youtube.com/watch?v=S-VeYcOCFZw */

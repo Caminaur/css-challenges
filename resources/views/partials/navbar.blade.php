@@ -2,15 +2,15 @@
     <li class="navbar-toggle" id="toggleButton" data-toggle-button="false"><i class="fas fa-bars"></i></li>
     <ul>
         <li class="nav-item">
-            <a href="#"><i class="fa fa-home"></i>Home</a>
+            <a href=" {{ url('/home') }} "><i class="fa fa-home"></i>{{ __('base.home') }}</a>
         </li>
         <div class="dropdown nav-item" data-dropdown>
             <li data-dropdown-button>
                 <a data-dropdown-button class="link" href="#"><i
-                        class="fa-solid fa-caret-down"></i>Challenges</a>
+                        class="fa-solid fa-caret-down"></i>{{ __('base.challenges') }}</a>
                 <div class="dropdown-menu information-grid">
                     <div>
-                        <div class="dropdown-heading">CSS 30 day Challenge</div>
+                        <div class="dropdown-heading">{{ __('base.30-d-challenges') }}</div>
                         <div class="dropdown-links">
                             @for ($i = 1; $i <= 30; $i++)
                                 @if ($i == 1 || $i == 4 || $i == 12 || $i == 13)
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="dropdown-heading">Bonus Challenges</div>
+                        <div class="dropdown-heading">{{ __('base.bonus-challenges') }}</div>
                         <div class="dropdown-links">
                             @for ($i = 1; $i <= 1; $i++)
                                 <a href="{{ url('/css-challenge-bonus/' . $i) }}">{{ $i }}</a>
@@ -34,17 +34,36 @@
             </li>
         </div>
         <li class="nav-item">
-            <a href="#"><i class="fa fa-key"></i>Repositories</a>
+            <a href="#"><i class="fa fa-key"></i>{{ __('base.version-control') }}</a>
         </li>
         <li class="nav-item">
-            <a href="#"><i class="fa fa-magic"></i>Features</a>
+            <a href="#"><i class="fa fa-magic"></i>{{ __('base.features') }}</a>
         </li>
 
         <li class="nav-item">
-            <a href="#"><i class="fa-solid fa-money-check-dollar"></i>Pricing</a>
+            <a href="#"><i class="fa-solid fa-money-check-dollar"></i>{{ __('base.pricing') }}</a>
         </li>
     </ul>
     <ul>
+        <div class="dropdown" data-dropdown>
+            <li data-dropdown-button>
+                <a class="link" href="#" data-dropdown-button>{{ __('base.lang') }}</a>
+                <div class="lang-div dropdown-menu" action="{{ url('/set/lang') }}">
+                    <h6>Change language!</h6>
+                    <a class="lang-links" href="{{ url('/set/es') }}">
+                        <img class="flag-icon" src="{{ url('/images/flags/spain_flag.png') }}" alt="">
+                        <span>ES</span>
+                    </a>
+                    <a class="lang-links" href="{{ url('/set/en') }}">
+                        <img class="flag-icon" src="{{ url('/images/flags/uk_flag.png') }}" alt="">
+                        <span>EN</span>
+                    </a>
+                    <a class="lang-links" href="{{ url('/set/de') }}">
+                        <img class="flag-icon" src="{{ url('/images/flags/german_flag.png') }}" alt="">
+                        <span>DE</span>
+                    </a>
+                </div>
+        </div>
         @if (str_contains(Request::url(), '/css-challenge-'))
             <div class="ba-box">
                 @php
@@ -65,33 +84,34 @@
         @guest
             @if (Route::has('login'))
                 <li class="nav-item">
-                    <a href="{{ route('login') }}"><i class="fa-regular fa-user"></i>Login</a>
+                    <a href="{{ route('login') }}"><i class="fa-regular fa-user"></i>{{ __('base.login') }}</a>
                 </li>
             @endif
             @if (Route::has('register'))
                 <li class="nav-item">
-                    <a href="{{ route('register') }}">Register</a>
+                    <a href="{{ route('register') }}">{{ __('base.register') }}</a>
                 </li>
             @endif
         @else
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+            <div class="dropdown">
+                <li class="nav-item" data-dropdown>
+                    <a class="link" data-dropdown-button>
+                        {{ Auth::user()->name }}
                     </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </li>
+                    <div class="dropdown-menu logout" data-dropdown-menu>
+                        <a class="dropdown-item btn-submit" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                                  document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            </div>
         @endguest
     </ul>
 </nav>

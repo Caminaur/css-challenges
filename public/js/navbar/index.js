@@ -23,4 +23,9 @@ toggleButton.addEventListener('click',()=>{
         toggleButton.setAttribute('data-toggle-button',false);
     }
     console.log(toggleButton);
+});   
+document.getElementById('logout-button').addEventListener('click',function(e){
+    e.preventDefault();
+    document.getElementById('logout-form').submit();
 });
+                                                  

@@ -72,12 +72,12 @@ div.caged {
 
 div.caged.open-input::after,
 div.caged.open-input::before {
-    animation: open-input 300ms forwards;
+    animation: open-input 500ms forwards;
 }
 
 div.caged.closed-input::before,
 div.caged.closed-input::after {
-    animation: closed-input 300ms forwards;
+    animation: closed-input 500ms forwards;
 }
 
 div.status-1::after {

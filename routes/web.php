@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\CoockieController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Services\CoockieService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,14 +14,15 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
+Route::get('/set/{locale?}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+    return redirect()->back();
+});
+
 Route::get('/home', function () {
     return view('home.home');
 })->name('home');
-
-
-Route::controller(HomeController::class)->group(function () {
-    Route::get('/test', 'GET_HOME')->name('test');
-});
 
 Route::get('/navbar', function () {
     return view('navbar');
@@ -56,5 +55,3 @@ Route::get('/css-challenge-bonus/{id}', function ($id) {
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
