@@ -36,17 +36,11 @@
         <li class="nav-item">
             <a href="#"><i class="fa fa-key"></i>{{ __('base.version-control') }}</a>
         </li>
-        <li class="nav-item">
-            <a href="#"><i class="fa fa-magic"></i>{{ __('base.features') }}</a>
-        </li>
 
-        <li class="nav-item">
-            <a href="#"><i class="fa-solid fa-money-check-dollar"></i>{{ __('base.pricing') }}</a>
-        </li>
     </ul>
     <ul>
         <div class="dropdown" data-dropdown>
-            <li data-dropdown-button>
+            <li class="nav-item" data-dropdown-button>
                 <a class="link" href="#" data-dropdown-button>{{ __('base.lang') }}</a>
                 <div class="lang-div dropdown-menu" action="{{ url('/set/lang') }}">
                     <h6>Change language!</h6>

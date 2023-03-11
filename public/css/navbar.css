@@ -31,8 +31,6 @@ header {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: auto;
-    height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -80,7 +78,18 @@ header {
     display: none;
 }
 
-@media(max-width:600px) {
+@media(max-width:747px) {
+
+    main {
+        background-color: #272727;
+        padding-top: 15px;
+        overflow: hidden;
+    }
+
+    nav ul .ba-box {
+        display: none;
+    }
+
     .navbar ul, .navbar li {
         flex-wrap: wrap;
         width: 100%;
@@ -103,6 +112,28 @@ header {
 
     .navbar ul div.dropdown {
         width: 100%;
+    }
+
+    nav.navbar .navbar-toggle[data-toggle-button=false]~ul {
+        display: block;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+    }
+
+    nav.navbar .navbar-toggle[data-toggle-button=false]~ul {
+        opacity: 0;
+        display: none;
+        transform: translateY(-480px);
+        transition: transform 300ms ease, opacity 300ms ease, display 800ms ease;
+    }
+
+    nav.navbar .navbar-toggle[data-toggle-button=true]~.nav-item {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: transform 300ms ease, opacity 300ms ease, display 800ms ease;
     }
 
 }
@@ -171,29 +202,6 @@ header {
     padding: .4rem;
 }
 
-@media(max-width:600px) {
-    nav.navbar .navbar-toggle[data-toggle-button=false]~ul {
-        display: block;
-        height: 200px;
-        width: 200px;
-        background-color: red;
-        position: absolute;
-        top: 0;
-    }
-
-    nav.navbar .navbar-toggle[data-toggle-button=false]~ul {
-        opacity: 0;
-        display: none;
-        transform: translateY(-480px);
-        transition: transform 300ms ease, opacity 300ms ease, display 800ms ease;
-    }
-
-    nav.navbar .navbar-toggle[data-toggle-button=true]~.nav-item {
-        opacity: 1;
-        transform: translateY(0px);
-        transition: transform 300ms ease, opacity 300ms ease, display 800ms ease;
-    }
-}
 
 .ba-box {
     position: absolute;
@@ -277,5 +285,18 @@ header {
     color: var(--btn-color);
     background-color: var(--main-hover-color);
 }
+
+@media(max-width:1500px) {
+    nav ul {
+        padding: 0 !important;
+    }
+
+    nav ul li {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        font-size: 16px;
+    }
+}
+
 
 /* https://www.youtube.com/watch?v=S-VeYcOCFZw */

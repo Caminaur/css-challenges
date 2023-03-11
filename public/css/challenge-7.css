@@ -10,6 +10,7 @@
     align-items: center;
     flex-wrap: wrap;
     overflow: auto;
+    transition: padding-top 300ms ease;
 }
 
 .card {
@@ -32,6 +33,12 @@
         border-bottom: 1px solid rgb(87, 86, 86);
     }
 
+}
+
+@media(max-width: 990px) {
+    .body {
+        padding-top: 15px;
+    }
 }
 
 .card .first-part {
