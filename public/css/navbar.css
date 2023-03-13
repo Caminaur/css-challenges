@@ -29,7 +29,7 @@ header {
 
 .navbar {
     margin: 0;
-    padding: 0;
+    padding: 8px 20px;
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -43,14 +43,6 @@ header {
     margin-bottom: 0;
     color: rgb(163, 163, 163);
     position: relative;
-}
-
-.navbar ul:last-child {
-    padding-right: 32px;
-}
-
-.navbar ul:first-child {
-    margin-left: 35px;
 }
 
 .navbar ul li, .navbar li {
@@ -78,13 +70,7 @@ header {
     display: none;
 }
 
-@media(max-width:747px) {
-
-    main {
-        background-color: #272727;
-        padding-top: 15px;
-        overflow: hidden;
-    }
+@media(max-width:787px) {
 
     nav ul .ba-box {
         display: none;

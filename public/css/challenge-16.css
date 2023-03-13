@@ -6,13 +6,12 @@
 
 .body {
     background-color: #EBECF2;
-    /* height: 100vh; */
+    height: 100%;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Poppins, 'Courier New', Courier, monospace;
-    padding-top: 30px;
 }
 
 form.signin {

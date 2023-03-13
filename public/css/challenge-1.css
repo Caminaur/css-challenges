@@ -1,7 +1,17 @@
+:root {
+    --data-background-color: #212121;
+}
+
+
+body {
+    background-color: var(--data-background-color);
+}
+
 #main {
     height: 100vh;
-    background-color: #212121;
+    background-color: var(--data-background-color);
 }
+
 
 .body {
     height: 100%;
@@ -15,7 +25,6 @@
     align-items: center;
     min-width: 300px;
     max-width: 310px;
-    /* background-color: rgb(194, 194, 49); */
     background-color: rgb(218, 218, 218);
     padding: 15px;
     margin-bottom: 15px;
@@ -32,15 +41,6 @@
     transform: rotate(360deg);
     transition: 0.5s;
 }
-
-/* .body .card .card-image:hover ~ .title{
-    rotate: 360deg;
-    transition: 0.5s;
-}
-.body .card .card-image:hover ~ .subtitle{
-    rotate: -360deg;
-    transition: 0.5s;
-} */
 
 .body .card .title {
     text-transform: capitalize;

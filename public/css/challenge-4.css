@@ -1,5 +1,6 @@
-main {
+main, body {
     background-color: #212121;
+    overflow-x: hidden;
 }
 
 #main {
@@ -14,6 +15,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
@@ -23,7 +25,6 @@ main {
     flex-basis: 25%;
     max-width: 315px;
     min-width: 230px;
-    /* display: inline-block; */
     overflow: hidden;
     cursor: pointer;
 }
@@ -43,11 +44,11 @@ main {
     text-decoration: none;
     background-color: #212121;
     color: white;
-    font-size: 1px;
-    padding: 6px 8px;
+    padding: 6px 6px;
     border: 3px solid white;
     cursor: pointer;
     text-transform: uppercase;
+    text-align: center;
     opacity: 0;
     transition: font-size 300ms ease-out;
 }

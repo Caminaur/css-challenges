@@ -21,7 +21,7 @@
                                     <div class="caged">
                                         <input id="name" type="text"
                                             class="form-control @error('name') is-invalid @enderror" name="name"
-                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                            autocomplete="off" value="{{ old('name') }}" required />
 
                                         @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -38,7 +38,7 @@
 
                                 <div class="col-md-6">
                                     <div class="caged">
-                                        <input id="email" type="email"
+                                        <input id="email" type="email" autocomplete="off"
                                             class="form-control @error('email') is-invalid @enderror" name="email"
                                             value="{{ old('email') }}" required autocomplete="email">
 
@@ -57,9 +57,9 @@
 
                                 <div class="col-md-6">
                                     <div class="caged">
-                                        <input id="password" type="password"
+                                        <input id="password" type="password" autocomplete="off"
                                             class="form-control @error('password') is-invalid @enderror" name="password"
-                                            required autocomplete="new-password">
+                                            autocomplete="off" required autocomplete="new-password">
 
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -95,5 +95,6 @@
             </div>
         </div>
     </div>
-    <script src="{{ url('/js/input-animations.js') }}"></script>
+    <script src="{{ url('/js/auth/input-animations.js') }}"></script>
+    <script src="{{ url('/js/auth/validation.js') }}"></script>
 @endsection

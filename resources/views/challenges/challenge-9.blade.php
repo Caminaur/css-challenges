@@ -12,8 +12,8 @@
                 </p>
                 <div class="icon-list">
                     <a href="" class="icon"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="" class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="" class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="" class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="" class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="image-section">
@@ -27,8 +27,8 @@
                 </p>
                 <div class="icon-list">
                     <a href="" class="icon"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="" class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="" class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="" class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="" class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="image-section">
@@ -42,8 +42,8 @@
                 </p>
                 <div class="icon-list">
                     <a href="" class="icon"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="" class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="" class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="" class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="" class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="image-section">

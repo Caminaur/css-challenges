@@ -1,27 +1,32 @@
 main {
     background-color: #212121;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-family: consolas;
+}
+
+body {
+    background-color: #212121;
 }
 
 #main {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .body {
+    height: 100%;
+    font-family: consolas;
     background-color: #212121;
     width: 1000px;
-    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 main .body .card {
-    /* flex-basis: 30%; */
+    min-width: 300px;
+    max-width: 310px;
     position: relative;
     cursor: pointer;
     background-color: #212121;
@@ -30,7 +35,6 @@ main .body .card {
 
 main .body .card div.box1 img.logo-image {
     max-width: 100px;
-    /* padding: 8px; */
 }
 
 .title {

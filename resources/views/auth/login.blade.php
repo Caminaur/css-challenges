@@ -84,5 +84,6 @@
             </div>
         </div>
     </div>
-    <script src="{{ url('/js/input-animations.js') }}"></script>
+    <script src="{{ url('/js/auth/input-animations.js') }}"></script>
+    <script src="{{ url('/js/auth/validation.js') }}"></script>
 @endsection
