@@ -38,11 +38,6 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
         });
-
-        $url = request()->url();
-        if ($url != "http://localhost") {
-            (new CoockieService())->setUrlCoockie();
-        };
     }
 
     /**

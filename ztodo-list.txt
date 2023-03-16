@@ -1,11 +1,5 @@
 
     Simplemente una lista de tareas para hacer
 
-    1) Rediseñar la navbar de tal forma que esta, junto con el body, ocupe el 100% del viewport.
-    2) Completar los 30 desafíos
-    3) Rehacer desafio 13
-    4) Practicar e implementar variable de css
-        https://www.youtube.com/watch?v=oZPR_78wCnY
-    5) Reparar challenge-17. Se rompe con la nueva navbar
-    6) challenge 16 no funciona como deberia
+    1) Rehacer desafio 13
     

@@ -1,16 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Services\CoockieService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 Route::get('/', function () {
-    $lastpage = (new CoockieService())->verifyAndRedirect();
-    if ($lastpage != false) {
-        return redirect($lastpage);
-    }
     return redirect('/home');
 });
 
