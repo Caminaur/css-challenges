@@ -119,9 +119,9 @@ return [
     |
     */
     'available_locales' => [
-        'English' => 'en',
-        'Español' => 'es',
-        'Deutsch' => 'de',
+        'en' => 'English',
+        'es' => 'Español',
+        'de' => 'Deutsch',
     ],
 
     /*
