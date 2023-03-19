@@ -118,6 +118,8 @@ return [
     | List all locales that your application works with
     |
     */
+
+    // should try to do this with enums probably
     'available_locales' => [
         'en' => 'English',
         'es' => 'Español',
