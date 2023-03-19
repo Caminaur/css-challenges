@@ -32,7 +32,7 @@
                     </div>
             </div>
             <div class="card">
-                <img class="card-image" src="/images/challenge-1/img3.jpg" alt="">
+                <img class="card-image" src="{{ url('/images/challenge-1/img3.jpg') }}" alt="">
                 <h3 class="title">INDIGO VIOLET</h3>
                 <h4 class="subtitle">PUBLIC RELATIONSHIPS</h3>
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aut quaerat rerum
