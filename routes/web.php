@@ -14,10 +14,11 @@ Route::get('set/{locale?}', [\App\Http\Controllers\LocaleController::class, 'set
 Route::middleware(\App\Http\Middleware\LastPage::class)->group(function () {
     Route::get('/css-challenge-{id}', function ($id) {
         return view('challenges.challenge-' . $id);
-    })->where('id', '^(3[00]|[12][0-9]|[1-9])$');
+    })->where('id', '(30|1b|4b|12b|13b|[12][0-9]|\d|)');
+
     Route::get('/css-challenge-bonus/{id}', function ($id) {
         return view('bonus-challenges.bonus-challenge-' . $id);
-    });
+    })->where('id', '(1)');
 });
 ///////////////////////////// CHALLENGES /////////////////////////////
 Auth::routes();
