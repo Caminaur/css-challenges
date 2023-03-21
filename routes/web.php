@@ -6,12 +6,12 @@ use Illuminate\Support\Facades\Auth;
 
 Route::permanentRedirect('/', '/home');
 
-Route::view('/home', 'home.home')->name('home')->middleware(\App\Http\Middleware\RedirectIfLastPageWasAChallenge::class);
+Route::view('/home', 'home.home')->name('home')->middleware('redirect.challenge');
 
 Route::get('set/{locale?}', [\App\Http\Controllers\LocaleController::class, 'setLocale']);
 
 ///////////////////////////// CHALLENGES /////////////////////////////
-Route::middleware(\App\Http\Middleware\LastPage::class)->group(function () {
+Route::middleware('lastpage')->group(function () {
     Route::get('/css-challenge-{id}', function ($id) {
         return view('challenges.challenge-' . $id);
     })->where('id', '(30|1b|4b|12b|13b|[12][0-9]|\d|)');
