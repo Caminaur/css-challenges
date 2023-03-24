@@ -11,5 +11,10 @@ return [
     'lang' => 'Lang',
     'login' => 'Anmeldung',
     'register' => 'Registrieren',
-    'logout' => 'Ausloggen'
+    'logout' => 'Ausloggen',
+    '404' => '404',
+    '404-message-1' => 'Bist du verloren?',
+    '404-message-2' => 'Keine Sorge',
+    '404-message-3' => 'Jeder kann einen Fehler machen',
+    '404-message-button' => 'Zurückkehren'
 ];

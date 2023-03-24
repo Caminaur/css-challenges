@@ -2,11 +2,12 @@
 
 namespace App\Http\Middleware;
 
+use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class LastPage
+class VerifyView
 {
     /**
      * Handle an incoming request.
@@ -17,11 +18,15 @@ class LastPage
      */
     public function handle(Request $request, Closure $next)
     {
-        $url = $request->url();
-        $endpoint = explode(':8000', $url)['1'];
-        if (str_contains($endpoint, 'challenge')) {
-            Session::put('lastpage', $endpoint);
-            Session::save();
+        $challenge = explode('-', $request->path());
+        $challengeNumber = $challenge[array_key_last($challenge)];
+        if (in_array('bonus', $challenge)) {
+            $challengeView = 'bonus-challenges.bonus-challenge-' . $challengeNumber;
+        } else {
+            $challengeView = 'challenges.challenge-' . $challengeNumber;
+        }
+        if (!view()->exists($challengeView)) {
+            return redirect(RouteServiceProvider::ERROR);
         }
         return $next($request);
     }

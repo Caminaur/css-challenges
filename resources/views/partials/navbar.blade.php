@@ -26,7 +26,7 @@
                         <div class="dropdown-heading">{{ __('base.bonus-challenges') }}</div>
                         <div class="dropdown-links">
                             @for ($i = 1; $i <= 1; $i++)
-                                <a href="{{ url('/css-challenge-bonus/' . $i) }}">{{ $i }}</a>
+                                <a href="{{ url('/css-challenge-bonus-' . $i) }}">{{ $i }}</a>
                             @endfor
                         </div>
                     </div>

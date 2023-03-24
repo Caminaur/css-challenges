@@ -13,11 +13,11 @@
 
     <main>
         <div class="column">
-            <p class="title">404</p>
-            <p class="message">Parece que te perdiste</p>
-            <p class="message">No te preocupes</p>
-            <p class="message">Cualquiera se puede equivocar</p>
-            <a class="link" href="/">Volver</a>
+            <p class="title">{{ __('base.404') }}</p>
+            <p class="message">{{ __('base.404-message-1') }}</p>
+            <p class="message">{{ __('base.404-message-2') }}</p>
+            <p class="message">{{ __('base.404-message-3') }}</p>
+            <a class="link" href="/">{{ __('base.404-message-button') }}</a>
         </div>
         <img class="image" src="{{ url('/images/404/not-found.png') }}" alt="">
     </main>

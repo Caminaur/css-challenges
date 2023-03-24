@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'lastpage' => \App\Http\Middleware\LastPage::class,
         'redirect.challenge' => \App\Http\Middleware\RedirectIfLastPageWasAChallenge::class,
+        'verify.view' => \App\Http\Middleware\VerifyView::class,
     ];
 }
