@@ -1,9 +1,11 @@
 <nav class="navbar">
     <li class="navbar-toggle" id="toggleButton" data-toggle-button="false"><i class="fas fa-bars"></i></li>
     <ul>
-        <li class="nav-item">
-            <a href=" {{ url('/home') }} "><i class="fa fa-home"></i>{{ __('base.home') }}</a>
-        </li>
+        <x-navbar.nav-item 
+            name="{{ __('base.home') }}" 
+            iclass="fa fa-home"
+            navUrl="{{ url('/home') }}"    
+        />
         <div class="dropdown nav-item" data-dropdown>
             <li data-dropdown-button>
                 <a data-dropdown-button class="link" href="#"><i
@@ -33,10 +35,11 @@
                 </div>
             </li>
         </div>
-        <li class="nav-item">
-            <a href="#"><i class="fa fa-key"></i>{{ __('base.version-control') }}</a>
-        </li>
-
+        <x-navbar.nav-item 
+            name="{{ __('base.version-control') }}" 
+            iclass="fa fa-key"
+            navUrl="#"    
+        />
     </ul>
     <ul>
         <div class="dropdown" data-dropdown>
