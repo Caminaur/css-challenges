@@ -1,225 +1,215 @@
-#main {
-    height: 100vh;
-}
+:root {
+    /* COLORS */
+    --white: #e9e9e9;
+    --gray: #333;
+    --blue: #0367a6;
+    --lightblue: #008997;
+  
+    /* RADII */
+    --button-radius: 0.7rem;
+  
+    /* SIZES */
+    --max-width: 758px;
+    --max-height: 420px;
+  
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
 
-.body {
+#main {
     align-items: center;
-    background-image: url('/images/challenge-13/background.jpg');
-    background-size: cover;
+    background-color: var(--white);
+    background: url('/images/challenge-13/background.jpg');
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    object-fit: cover;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    place-items: center;
 }
 
-.body div.main-box {
-    height: 65vh;
-    width: 60vw;
-    border-radius: 12px;
-    background-color: transparent;
-    display: flex;
-    box-shadow: -2px 2px 8px rgb(0 0 0 / 50%);
+.form__title {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 1.25rem;
+}
+
+.link {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    text-decoration: none;
+}
+
+.containeru {
+    background-color: var(--white);
+    border-radius: var(--button-radius);
+    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25), 0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+    height: var(--max-height);
+    max-width: var(--max-width);
+    overflow: hidden;
     position: relative;
+    width: 100%;
 }
 
-.body div.signin-box {
+.containeru__form {
     height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.containeru--signin {
+    left: 0;
     width: 50%;
-    border-radius: 12px 0 0 12px;
-    background-color: #EAE8EA;
     z-index: 2;
 }
 
-.body div.signup-box {
-    height: 100%;
+.containeru.right-panel-active .containeru--signin {
+    transform: translateX(100%);
+}
+
+.containeru--signup {
+    left: 0;
+    opacity: 0;
     width: 50%;
-    border-radius: 0 12px 12px 0;
-    background-color: #EAE8EA;
     z-index: 1;
 }
 
-.body div.signin-box form.formulario,
-.body div.signup-box form.formulario {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    margin: 30px;
-}
-
-.body div.signin-box form.formulario h2.titulo,
-.body div.signup-box form.formulario h2.titulo {
-    font-size: 24px;
-    margin: 25px 0 20px 0;
-    align-self: center;
-    color: #727272;
-    font-weight: 300;
-}
-
-.body div.signin-box form.formulario .inputs,
-.body div.signup-box form.formulario .inputs {
-    border: none;
-    margin: 8px 0;
-    padding: 7px 10px;
-    border-radius: 5px;
-    background-color: white;
-}
-
-
-.body div.signin-box form.formulario .inputs input,
-.body div.signup-box form.formulario .inputs input {
-    border: none;
-}
-
-.body div.signin-box form.formulario .inputs input:focus,
-.body div.signup-box form.formulario .inputs input:focus {
-    outline: none;
-}
-
-.body div.signin-box form.formulario small.password-recovery {
-    align-self: center;
-    margin: 20px 0;
-    color: #727272;
-}
-
-.body div.signin-box form.formulario .botones-deco,
-.body div.signup-box form.formulario .botones-deco,
-.botones-deco {
-    padding: 12px 10px;
-    margin: 30px 0 0px 0;
-    width: 60%;
-    align-self: center;
-    border: none;
-    background-color: #006B82;
-    color: white;
-    border-radius: 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    overflow: visible;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-
-div.main-box .signin-action {
-    background-color: transparent;
-    position: absolute;
-    height: inherit;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 12px;
-    border-top-left-radius: 12px;
-    opacity: 0;
-    transition: opacity 700ms ease-in;
-}
-
-div.main-box .overlay1 .signup-action {
-    background-image: url('/images/challenge-13/background.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 0;
-    height: inherit;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-right-radius: 12px;
-    border-top-right-radius: 12px;
-
-}
-
-div.main-box .signup-action.state-2 {
-    animation: state-2 700ms linear;
-    animation-fill-mode: forwards;
+.containeru.right-panel-active .containeru--signup {
+    animation: show 0.6s;
+    opacity: 1;
+    transform: translateX(100%);
     z-index: 5;
 }
 
-div.main-box .signup-action.state-1 {
-    animation: state-1 700ms linear;
-    animation-fill-mode: forwards;
-    z-index: 5;
-}
-
-#signup-button {
-    transition: opacity 300ms ease-in;
-}
-
-div.main-box .signup-action.state-2 #signup-button {
-    opacity: 0;
-}
-
-div.main-box .signup-action.state-2~.signin-action {
-    opacity: 1;
-}
-
-div.main-box .signup-action.state-2 #signip-button {
-    display: none;
-}
-
-div.main-box .signup-action.state-2~.signup-action {
-    opacity: 1;
-}
-
-/* Sign in box */
-/* div.main-box .signup-action.state-2~.signin-action {
-    opacity: 1;
-}
-
-div.main-box .signup-action.state-2~.signin-action {
-    opacity: 0;
-} */
-
-/* Sign in box */
-
-div.main-box div.overlay1 {
+.containeru__overlay {
     height: 100%;
     left: 50%;
     overflow: hidden;
     position: absolute;
     top: 0;
+    transition: transform 0.6s ease-in-out;
     width: 50%;
     z-index: 100;
 }
 
-@keyframes state-2 {
-    0% {
-        right: 0;
-        border-bottom-right-radius: 12px;
-        border-top-right-radius: 12px;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-    }
-
-    100% {
-        right: 50%;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 12px;
-        border-top-left-radius: 12px;
-    }
+.containeru.right-panel-active .containeru__overlay {
+    transform: translateX(-100%);
 }
 
-@keyframes state-1 {
-    0% {
-        right: 50%;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 12px;
-        border-top-left-radius: 12px;
+.overlay {
+    background-color: var(--lightblue);
+    background: url('/images/challenge-13/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: 0;
+    background-position-y: 100%;
+    height: 100%;
+    left: -100%;
+    position: relative;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    width: 200%;
+}
+
+.containeru.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay__panel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    width: 50%;
+}
+
+.overlay--left {
+    transform: translateX(-20%);
+}
+
+.containeru.right-panel-active .overlay--left {
+    transform: translateX(0);
+}
+
+.overlay--right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.containeru.right-panel-active .overlay--right {
+    transform: translateX(20%);
+}
+
+.btn {
+    background-color: var(--blue);
+    background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+    border-radius: 20px;
+    border: 1px solid var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.form>.btn {
+    margin-top: 1.5rem;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.form {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    height: 100%;
+    text-align: center;
+}
+
+.input {
+    background-color: #fff;
+    border: none;
+    padding: 0.9rem 0.9rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
     }
 
+    50%,
     100% {
-        right: 0;
-        border-bottom-right-radius: 12px;
-        border-top-right-radius: 12px;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-
+        opacity: 1;
+        z-index: 5;
     }
-
 }

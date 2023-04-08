@@ -20,8 +20,7 @@ class LastPage
         $url = $request->url();
         $endpoint = explode(':8000', $url)['1'];
         if (str_contains($endpoint, 'challenge')) {
-            Session::put('lastpage', $endpoint);
-            Session::save();
+            session(['lastpage'=> $endpoint]);
         }
         return $next($request);
     }

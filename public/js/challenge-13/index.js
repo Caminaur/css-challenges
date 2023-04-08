@@ -1,10 +1,16 @@
+const signInBtn = document.getElementById('signIn');
+const signUpBtn = document.getElementById('signUp');
+const fistForm = document.getElementById('form1');
+const secondForm = document.getElementById('form2');
+const container = document.querySelector('.containeru');
 
-    let signin = document.getElementById('signin-button');
-    let signup = document.getElementById('signup-button');
-    let signupAction = document.getElementById('signup-action');
-    signup.addEventListener('click', function(){
-        signupAction.setAttribute('class','signup-action state-2');
-    });
-    signin.addEventListener('click', function(){
-        signupAction.setAttribute('class','signup-action state-1');
-    });
+signInBtn.addEventListener('click', () => {
+  container.classList.remove('right-panel-active');
+});
+
+signUpBtn.addEventListener('click', () => {
+  container.classList.add('right-panel-active');
+});
+
+fistForm.addEventListener('submit', (e) => e.preventDefault());
+secondForm.addEventListener('submit', (e) => e.preventDefault());

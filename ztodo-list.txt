@@ -2,4 +2,4 @@
     Simplemente una lista de tareas para hacer
 
     1) Rehacer desafio 13
-    
+    2) Rehacer navbar con componentes

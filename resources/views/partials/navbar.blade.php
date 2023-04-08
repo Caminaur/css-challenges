@@ -15,7 +15,7 @@
                         <div class="dropdown-heading">{{ __('base.30-d-challenges') }}</div>
                         <div class="dropdown-links">
                             @for ($i = 1; $i <= 30; $i++)
-                                @if ($i == 1 || $i == 4 || $i == 12 || $i == 13)
+                                @if ($i == 1 || $i == 4 || $i == 12)
                                     <a href="{{ url('/css-challenge-' . $i) }}">{{ $i }}</a>
                                     <a href="{{ url('/css-challenge-' . $i . 'b') }}">{{ $i }}b</a>
                                 @else
