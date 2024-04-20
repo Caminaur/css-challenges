@@ -17,28 +17,35 @@
     <link rel="stylesheet" href="/css/@yield('css').css">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/css/navbar.css">
+    
+    
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    
     @yield('scripts') {{-- Para agregar JS extras --}}
     <script src="{{ url('/js/navbar/index.js') }}" defer></script>
 </head>
 
 <body>
-    <header>
-        {{-- Navbar --}}
-        {{-- @include('partials.navbar') --}}
-        @include('partials.navbar')
-    </header>
-
-    <main id="main">
-        @yield('main')
-    </main>
-
-    <footer>
-        {{-- Footer --}}
-        @include('partials.footer')
-    </footer>
-
-    {{-- Scripts --}}
-    @include('partials.scripts')
+    <div id="app">
+        <header>
+            {{-- Navbar --}}
+            {{-- @include('partials.navbar') --}}
+            @include('partials.navbar')
+        </header>
+    
+        <main id="main">
+            @yield('main')
+        </main>
+    
+        <footer>
+            {{-- Footer --}}
+            @include('partials.footer')
+        </footer>
+    
+        {{-- Scripts --}}
+        @include('partials.scripts')
+    </div>
 
 
 </body>

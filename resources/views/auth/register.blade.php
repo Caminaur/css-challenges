@@ -95,6 +95,6 @@
             </div>
         </div>
     </div>
-    <script src="{{ url('/js/auth/input-animations.js') }}"></script>
+    <script src="{{ url('/js/auth/input-animations.js') }}" defer></script>
     <script src="{{ url('/js/auth/validation.js') }}"></script>
 @endsection

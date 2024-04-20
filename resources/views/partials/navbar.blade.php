@@ -35,6 +35,38 @@
                 </div>
             </li>
         </div>
+        <div class="dropdown nav-item" data-dropdown>
+            <li data-dropdown-button>
+                <a data-dropdown-button class="link" href="#"><i
+                        class="fa-solid fa-caret-down"></i>{{ __('base.graphs') }}</a>
+                <div class="dropdown-menu information-grid">
+                    <div>
+                        <div class="dropdown-heading">{{ __('base.barcharts') }}</div>
+                        <div class="dropdown-links">
+                            @for ($i = 1; $i <= 4; $i++)
+                                <a href="{{ url('/graphs/barchart-' . $i) }}">{{ __('base.barchart') }} {{ $i }}</a>
+                            @endfor
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">{{ __('base.maps') }}</div>
+                        <div class="dropdown-links">
+                            @for ($i = 1; $i <= 1; $i++)
+                                <a href="{{ url('/graphs/map-' . $i) }}">{{ __('base.map') }} {{ $i }}</a>
+                            @endfor
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">{{ __('base.piecharts') }}</div>
+                        <div class="dropdown-links">
+                            @for ($i = 1; $i <= 3; $i++)
+                                <a href="{{ url('/graphs/piechart-' . $i) }}">{{ __('base.piechart') }} {{ $i }}</a>
+                            @endfor
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
         <x-navbar.nav-item 
             name="{{ __('base.version-control') }}" 
             iclass="fa fa-key"
@@ -46,7 +78,7 @@
             <li class="nav-item" data-dropdown-button>
                 <a class="link" href="#" data-dropdown-button>{{ __('base.lang') }}</a>
                 <div class="lang-div dropdown-menu" action="{{ url('/set/lang') }}">
-                    <h6>Change language!</h6>
+                    <h6>{{ __('base.change-lang') }}</h6>
                     <a class="lang-links" href="{{ url('/set/es') }}">
                         <img class="flag-icon" src="{{ url('/images/flags/spain_flag.png') }}" alt="">
                         <span>ES</span>

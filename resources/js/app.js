@@ -6,17 +6,22 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
+import * as d3 from 'd3';
+import * as topojson from 'topojson';
+
+window.d3 = d3;
+window.topojson =  topojson;
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
  * registering components with the application instance so they are ready
  * to use in your application's views. An example is included for you.
  */
-
 const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
+
 
 /**
  * The following block of code may be used to automatically register your

@@ -16,5 +16,13 @@ return [
     '404-message-1' => 'Bist du verloren?',
     '404-message-2' => 'Keine Sorge',
     '404-message-3' => 'Jeder kann einen Fehler machen',
-    '404-message-button' => 'Zurückkehren'
+    '404-message-button' => 'Zurückkehren',
+    'graphs' => 'Diagramme',
+    'barcharts' => 'Balkendiagramme',
+    'barchart' => 'Balkendiagramm',
+    'maps' => 'Karten',
+    'map' => 'Karte',
+    'piecharts' => 'Kreisdiagramme',
+    'piechart' => 'Kreisdiagramm',
+    'change-lang' => 'Sprache ändern!'
 ];

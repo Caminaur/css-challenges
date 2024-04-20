@@ -1,0 +1,96 @@
+
+#app{
+    height: 100%;
+    overflow: hidden;
+}
+
+#main{
+    height: 75%;
+    display: flex;
+    /* align-items: start;
+    justify-content: start; */
+}
+
+line#limit {
+    stroke: #FED966;
+    stroke-width: 3;
+    stroke-dasharray: 3 6;
+}
+
+.graph{
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    background-color: #2F4A6D;
+    overflow: scroll;
+}
+.grid path {
+    stroke-width: 3;
+}
+
+.grid .tick line {
+    stroke: #9FAAAE;
+    stroke-opacity: 0.2;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+div#layout {
+    text-align: center; 
+}
+
+text {
+    font-size: 12px;
+    fill: whitesmoke;
+}
+  
+path {
+    stroke: gray;
+}
+
+line {
+    stroke: gray;
+}
+
+line#limit {
+    stroke: #FED966;
+    stroke-width: 3;
+    stroke-dasharray: 3 6;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+.grid .tick line {
+    stroke: #9FAAAE;
+    stroke-opacity: 0.3;
+}
+
+text.divergence {
+    font-size: 12px;
+    fill: #2F4A6D;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+text.value {
+    font-size: 14px;
+}
+
+text.title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+text.label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+text.source {
+    font-size: 10px;
+}

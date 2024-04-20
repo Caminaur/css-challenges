@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
 let inputs = document.querySelectorAll(".caged");
 for (let divInput of inputs) {
 
-    input = divInput.childNodes[1];
+    input = divInput.childNodes[0];
     // // We check for autofill
-    // // We check for autofill    
 
     // when hover the div
     divInput.addEventListener('mouseover',function(){
@@ -36,7 +35,7 @@ for (let divInput of inputs) {
     // When information is added to the input
     input.addEventListener('change',function(e){
         statusDiv = divInput.parentElement.parentElement;
-        input = divInput.childNodes[1];
+        input = divInput.childNodes[0];
         if (input.value=="") {
             // if no content status-1
             statusDiv.setAttribute('class','row mb-3 status-1');
@@ -54,7 +53,7 @@ for (let divInput of inputs) {
     });
     input.addEventListener('focusout', function(e){
         statusDiv = divInput.parentElement.parentElement;
-        input = divInput.childNodes[1];
+        input = divInput.childNodes[0];
         if (input.value=="") {
             // if no content status-1
             statusDiv.setAttribute('class','row mb-3 status-1');

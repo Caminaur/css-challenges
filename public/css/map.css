@@ -1,0 +1,20 @@
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sphere{
+    background-color: #509efe;
+}
+
+.country{
+    fill: #b8b8b8;
+    stroke: #5c5b5b;
+    stroke-width: .1px;
+}
+
+.country:hover{
+    cursor: pointer;
+    fill: rgb(61, 214, 168);
+}

@@ -16,5 +16,13 @@ return [
     '404-message-1' => 'Parece que te perdiste',
     '404-message-2' => 'No te preocupes',
     '404-message-3' => 'Cualquiera se puede equivocar',
-    '404-message-button' => 'Volver'
+    '404-message-button' => 'Volver',
+    'graphs' => 'Gráficos',
+    'barcharts' => 'Gráficos de barras',
+    'barchart' => 'Gráfico de barras',
+    'maps' => 'Mapas',
+    'map' => 'Mapa',
+    'piecharts' => 'Gráficos circulares',
+    'piechart' => 'Gráfico circular',
+    'change-lang' => '¡Cambiar idioma!'
 ];

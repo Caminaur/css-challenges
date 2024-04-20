@@ -16,5 +16,13 @@ return [
     '404-message-1' => 'Seems you are lost',
     '404-message-2' => 'Don\'t worry',
     '404-message-3' => 'Mistakes happen',
-    '404-message-button' => 'Go back'
+    '404-message-button' => 'Go back',
+    'graphs' => 'Graphs',
+    'barcharts' => 'Barcharts',
+    'barchart' => 'Barchart',
+    'maps' => 'Maps',
+    'map' => 'Map',
+    'piecharts' => 'Piecharts',
+    'piechart' => 'Piechart',
+    'change-lang' => 'Change language!'
 ];
