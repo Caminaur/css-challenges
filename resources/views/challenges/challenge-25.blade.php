@@ -12,5 +12,5 @@
             <button id="on" class="button posicion-4">ON</button>
         </div>
     </div>
-    <script src="{{ url('/js/challenge-25/index.js') }}"></script>
+    <script src="{{ url('/js/challenge-25/index.js') }}"defer></script>
 @endsection

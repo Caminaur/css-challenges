@@ -36,5 +36,5 @@
             </div>
         </form>
     </div>
-    <script src="{{ url('/js/challenge-16/index.js') }}"></script>
+    <script src="{{ url('/js/challenge-16/index.js') }}" defer></script>
 @endsection

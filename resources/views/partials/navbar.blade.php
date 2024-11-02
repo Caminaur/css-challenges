@@ -59,7 +59,7 @@
                     <div>
                         <div class="dropdown-heading">{{ __('base.piecharts') }}</div>
                         <div class="dropdown-links">
-                            @for ($i = 1; $i <= 3; $i++)
+                            @for ($i = 1; $i <= 2; $i++)
                                 <a href="{{ url('/graphs/piechart-' . $i) }}">{{ __('base.piechart') }} {{ $i }}</a>
                             @endfor
                         </div>

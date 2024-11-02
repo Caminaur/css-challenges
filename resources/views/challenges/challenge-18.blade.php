@@ -8,5 +8,5 @@
         <div class="button" id="button"></div>
         <div class="contenido" id="circle"></div>
     </div>
-    <script src="{{ url('/js/challenge-18/index.js') }}"></script>
+    <script src="{{ url('/js/challenge-18/index.js') }}" defer></script>
 @endsection

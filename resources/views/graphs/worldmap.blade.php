@@ -6,5 +6,5 @@
 @section('main')
 
 
-<script type="module" src="{{ url('/js/map/index.js') }}"></script>
+<script type="module" src="{{ url('/js/map/index.js') }}"defer></script>
 @endsection

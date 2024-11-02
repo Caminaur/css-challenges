@@ -10,8 +10,8 @@
 }
 
 .card {
-    height: 100%;
-    width: 400px;
+    height: 550px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,17 +29,22 @@
     height: 170px;
     z-index: 9;
     transform: rotate(28deg) scaleY(1.06) scaleX(1.02);
-    box-shadow: -3px -1px 3px rgba(0, 0, 0, 0.575), 2px 1px 3px rgba(0, 0, 0, 0.575);
+    box-shadow: -3px -1px 3px rgba(0, 0, 0, 0.575),
+        2px 1px 3px rgba(0, 0, 0, 0.575);
 }
 
 .card .circulo2 {
-    background: #CA548D;
-    background: linear-gradient(0deg, rgba(202, 84, 141, 1) 0%, rgba(232, 109, 154, 1) 50%, rgba(255, 180, 196, 1) 100%);
+    background: #ca548d;
+    background: linear-gradient(
+        0deg,
+        rgba(202, 84, 141, 1) 0%,
+        rgba(232, 109, 154, 1) 50%,
+        rgba(255, 180, 196, 1) 100%
+    );
     width: 155px;
     height: 155px;
     z-index: 10;
 }
-
 
 .card .circulo3 {
     background-color: rgb(159, 159, 159);
@@ -51,7 +56,7 @@
 }
 
 .card .circulo4 {
-    background-color: #DBBCB7;
+    background-color: #dbbcb7;
     width: 193px;
     height: 193px;
     z-index: 7;
@@ -92,7 +97,7 @@
     height: 10px;
     width: 10px;
     background-color: rgba(232, 109, 154, 1);
-    transform: translateY(-7px)translateX(-1px);
+    transform: translateY(-7px) translateX(-1px);
     border-radius: 50%;
     z-index: 12;
     border: 3px solid white;
@@ -115,15 +120,27 @@
 .square.up {
     top: 110px;
     z-index: 6;
-    background: linear-gradient(90deg, rgba(206, 179, 172, 1) 0%, rgba(219, 190, 184, 1) 60%, rgba(230, 196, 189, 1) 100%);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.394) inset, -1px -1px 1px rgba(0, 0, 0, 0.294) inset;
+    background: linear-gradient(
+        90deg,
+        rgba(206, 179, 172, 1) 0%,
+        rgba(219, 190, 184, 1) 60%,
+        rgba(230, 196, 189, 1) 100%
+    );
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.394) inset,
+        -1px -1px 1px rgba(0, 0, 0, 0.294) inset;
 }
 
 .square.down {
     bottom: 110px;
     z-index: 6;
-    background: linear-gradient(90deg, rgba(206, 179, 172, 1) 0%, rgba(219, 190, 184, 1) 60%, rgba(230, 196, 189, 1) 100%);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.394) inset, -1px -1px 1px rgba(0, 0, 0, 0.294) inset;
+    background: linear-gradient(
+        90deg,
+        rgba(206, 179, 172, 1) 0%,
+        rgba(219, 190, 184, 1) 60%,
+        rgba(230, 196, 189, 1) 100%
+    );
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.394) inset,
+        -1px -1px 1px rgba(0, 0, 0, 0.294) inset;
     border-radius: 3px;
     z-index: 6;
 }
@@ -132,18 +149,24 @@
     position: absolute;
     height: 35px;
     width: 18px;
-    background: linear-gradient(90deg, rgba(206, 179, 172, 1) 0%, rgba(219, 190, 184, 1) 60%, rgba(230, 196, 189, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(206, 179, 172, 1) 0%,
+        rgba(219, 190, 184, 1) 60%,
+        rgba(230, 196, 189, 1) 100%
+    );
 }
 
 .deco1 {
     top: 168px;
-    left: 143px;
+    left: 96px;
     transform: rotate(-16deg) skew(-20deg);
-    box-shadow: 0px 0px 1px rgb(0 0 0 / 39%) inset, -1px -1px 1px rgb(0 0 0 / 29%) inset;
+    box-shadow: 0px 0px 1px rgb(0 0 0 / 39%) inset,
+        -1px -1px 1px rgb(0 0 0 / 29%) inset;
 }
 
 .deco1::before {
-    content: '';
+    content: "";
     background-color: white;
     position: absolute;
     height: 48px;
@@ -156,14 +179,15 @@
 }
 
 .deco2 {
-    top: 168px;
-    left: 236.5px;
+    top: 170px;
+    left: 183px;
     transform: rotate(16deg) skew(20deg);
-    box-shadow: 0px 0px 1px rgb(0 0 0 / 39%) inset, -1px -1px 1px rgb(0 0 0 / 29%) inset;
+    box-shadow: 0px 0px 1px rgb(0 0 0 / 39%) inset,
+        -1px -1px 1px rgb(0 0 0 / 29%) inset;
 }
 
 .deco2::before {
-    content: '';
+    content: "";
     background-color: white;
     position: absolute;
     height: 48px;
@@ -176,14 +200,15 @@
 }
 
 .deco3 {
-    bottom: 165px;
-    left: 235px;
+    bottom: 167px;
+    left: 183px;
     transform: rotate(-9deg) skew(-13deg);
-    box-shadow: 0px 0px 1px rgb(0 0 0 / 29%) inset, -1px -1px 1px rgb(0 0 0 / 29%) inset;
+    box-shadow: 0px 0px 1px rgb(0 0 0 / 29%) inset,
+        -1px -1px 1px rgb(0 0 0 / 29%) inset;
 }
 
 .deco3::before {
-    content: '';
+    content: "";
     background-color: white;
     position: absolute;
     height: 50px;
@@ -197,14 +222,14 @@
 
 .deco4 {
     bottom: 165px;
-    left: 144px;
+    left: 98px;
     transform: rotate(17deg) skew(15deg);
-    box-shadow: 0px 0px 1px rgb(0 0 0 / 39%) inset, -1px -1px 1px rgb(0 0 0 / 29%) inset;
+    box-shadow: 0px 0px 1px rgb(0 0 0 / 39%) inset,
+        -1px -1px 1px rgb(0 0 0 / 29%) inset;
 }
 
-
 .deco4::before {
-    content: '';
+    content: "";
     background-color: white;
     position: absolute;
     height: 50px;
@@ -218,29 +243,34 @@
 
 .button1 {
     position: absolute;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0)50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgb(0, 0, 0) 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
     box-shadow: 1px 1px 1px white inset, -1px -1px 1px white inset;
     border: 1px solid black;
     border-bottom-right-radius: 50%;
     border-top-right-radius: 50%;
     height: 34px;
     width: 8px;
-    top: 215px;
-    right: 110px;
+    top: 209px;
+    right: 61px;
     transform: rotate(-30deg) skew(0);
     z-index: 6;
 }
 
 .button2 {
     position: absolute;
-    background-color: #DBBCB7;
+    background-color: #dbbcb7;
     border: 1px solid black;
     border-bottom-right-radius: 38%;
     border-top-right-radius: 38%;
     height: 35px;
     width: 14px;
     top: 300px;
-    right: 108px;
+    right: 60px;
     transform: rotate(24deg) skew(0);
     z-index: 6;
 }

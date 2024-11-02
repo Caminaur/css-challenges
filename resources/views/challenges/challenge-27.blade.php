@@ -33,4 +33,3 @@
         <div class="section-2"></div>
     </div>
 @endsection
-{{-- https://www.youtube.com/watch?v=S-VeYcOCFZw --}}

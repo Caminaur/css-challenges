@@ -6,5 +6,5 @@
 @section('main')
 
 
-<script type="module" src="{{ url('/js/graphs/barchart/barchart-1.js') }}"></script>
+<script type="module" src="{{ url('/js/graphs/barchart/barchart-1.js') }}"defer></script>
 @endsection

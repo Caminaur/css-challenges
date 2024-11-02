@@ -5,7 +5,7 @@
 
 @section('main')
     <div class="body">
-        <div class="search" id="milanesa">
+        <div class="search">
             <input type="text" id="input" placeholder="Search...">
             <button id="search-lupa">
                 <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
@@ -16,5 +16,5 @@
         </div>
         <p class="message">Click the button or hit enter</p>
     </div>
-    <script src="{{ url('/js/challenge-12/script.js') }}"></script>
+    <script src="{{ url('/js/challenge-12/script.js') }}" defer></script>
 @endsection

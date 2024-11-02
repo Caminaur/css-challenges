@@ -53,5 +53,5 @@
         </div>
     </div>
 
-    <script src="{{ url('/js/challenge-29/index.js') }}"></script>
+    <script src="{{ url('/js/challenge-29/index.js') }}"defer></script>
 @endsection

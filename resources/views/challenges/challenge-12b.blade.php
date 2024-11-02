@@ -14,5 +14,5 @@
         </div>
         <div class="note">Click the button or hit enter.</div>
     </div>
-    <script src="{{ url('/js/challenge-12/scriptb.js') }}"></script>
+    <script src="{{ url('/js/challenge-12/scriptb.js') }}" defer></script>
 @endsection
